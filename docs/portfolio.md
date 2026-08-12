@@ -26,7 +26,7 @@ The architecture keeps v0.1.0 intentionally small. It does not include cloud pro
 - Ollama isolated behind a provider boundary.
 - Strict mode for source-grounded transformations such as incident reports and code documentation.
 - Lightweight Markdown response cleanup that removes accidental outer fences while preserving internal code blocks.
-- Unit tests for CLI parsing, template discovery, prompt composition, input/output behavior, and cleanup.
+- Unit and executable smoke tests for CLI parsing, template discovery, prompt composition, input/output behavior, provider boundaries, and cleanup.
 - CI for formatting, clippy with warnings denied, and tests.
 
 ## Tech Stack

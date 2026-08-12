@@ -13,6 +13,17 @@ Developers often have private material that is almost documentation: scratch not
 
 mdforge keeps the workflow local-first. It composes a clear layered prompt, sends it to Ollama on your machine, cleans up the Markdown result, and writes a predictable output file.
 
+## Quickstart
+
+```text
+git clone https://github.com/BasleT/mdforge.git
+cd mdforge
+ollama pull qwen2.5-coder:14b
+cargo run -- file examples/incident-notes.txt --template incident-report --strict
+```
+
+The generated Markdown is written to `output/incident-notes.md` by default.
+
 ## Features
 
 - Local-first AI workflow through Ollama
@@ -24,6 +35,10 @@ mdforge keeps the workflow local-first. It composes a clear layered prompt, send
 - Predictable output paths with `--output`
 - Rust CLI built with clap
 - No cloud account required for generation
+
+## Project Status
+
+mdforge is a polished v0.1.0 release. It is useful today for prompt and single-file Markdown transformations, while intentionally avoiding broader document ingestion, hosted providers, telemetry, or application framework complexity.
 
 ## Demo
 
@@ -65,7 +80,7 @@ Exact output depends on the local model. Strict mode tells mdforge to avoid unsu
 
 Requirements:
 
-- Rust and Cargo
+- Rust 1.85+ and Cargo
 - Ollama running locally
 - A compatible local Ollama model
 
@@ -127,6 +142,19 @@ mdforge file examples/small-cli.rs --template code-docs --strict
 mdforge file examples/sample.json --output output/config-docs.md
 ```
 
+## Non-Goals For v0.1.0
+
+mdforge deliberately does not include:
+
+- hosted cloud LLM providers
+- recursive directory ingestion
+- PDF, Word document, image, or OCR parsing
+- telemetry
+- web UI
+- databases, embeddings, vector search, or RAG
+
+Those may be explored later, but v0.1.0 stays focused on local prompt and single-file Markdown workflows.
+
 ## Templates
 
 Built-in templates:
@@ -183,6 +211,8 @@ Output writer
 
 Ollama is isolated behind a provider boundary so future providers can be added without rewriting the CLI flow. v0.1.0 intentionally supports Ollama only.
 
+See [docs/architecture.md](docs/architecture.md) for the module-level design.
+
 ## Privacy
 
 With the Ollama provider, source material is sent to the locally running Ollama service instead of a hosted LLM API. Your local Ollama setup, installed models, and machine configuration still determine where data is processed and stored. Review your Ollama configuration before using mdforge with sensitive material.
@@ -195,6 +225,7 @@ See [SECURITY.md](SECURITY.md) for data handling notes and vulnerability reporti
 cargo fmt --check
 cargo clippy --all-targets --all-features -- -D warnings
 cargo test
+cargo package --allow-dirty
 ```
 
 Useful smoke checks:
@@ -204,6 +235,12 @@ cargo run -- templates
 cargo run -- prompt "Summarize this local-first Markdown CLI"
 cargo run -- file examples/incident-notes.txt --template incident-report --strict
 ```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution scope and local development expectations.
+
+## Release Notes
+
+- [v0.1.0 release notes](docs/release-notes-v0.1.0.md)
 
 ## Roadmap
 
