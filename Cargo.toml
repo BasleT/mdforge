@@ -1,0 +1,19 @@
+[package]
+name = "mdforge"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Local-first Markdown generation for developers using Rust and Ollama."
+license = "MIT"
+readme = "README.md"
+homepage = "https://basle.net"
+keywords = ["markdown", "ollama", "cli", "local-ai"]
+categories = ["command-line-utilities", "text-processing"]
+exclude = ["/output/**", "/target/**"]
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.6", features = ["derive"] }
+reqwest = { version = "0.13.4", default-features = false, features = ["json", "rustls"] }
+serde = { version = "1.0.229", features = ["derive"] }
+tokio = { version = "1.53.1", features = ["full"] }

@@ -1,0 +1,5 @@
+server died at 3am
+database connection timeout
+restarted api
+need to investigate connection pool
+probably add better logging

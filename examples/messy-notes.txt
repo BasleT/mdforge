@@ -1,0 +1,8 @@
+meeting notes from docs cleanup
+
+- readme is old and has wrong commands
+- config example needs a table
+- api notes are scattered across comments
+- action: document strict mode warning
+- action: add sample incident report
+- question: should custom templates be v0.2?

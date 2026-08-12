@@ -1,0 +1,16 @@
+{
+  "service": "mdforge",
+  "version": "0.1.0",
+  "features": [
+    "prompt-to-markdown",
+    "file-to-markdown",
+    "built-in templates",
+    "strict mode",
+    "ollama provider"
+  ],
+  "defaults": {
+    "model": "qwen2.5-coder:14b",
+    "template": "default",
+    "output_directory": "output"
+  }
+}
