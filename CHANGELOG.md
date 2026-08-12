@@ -2,7 +2,7 @@
 
 All notable changes to mdforge will be documented in this file.
 
-## 0.1.0
+## 0.1.0 - 2026-08-11
 
 Initial public release.
 

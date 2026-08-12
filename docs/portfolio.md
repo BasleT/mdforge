@@ -40,6 +40,10 @@ The architecture keeps v0.1.0 intentionally small. It does not include cloud pro
 - Ollama
 - GitHub Actions
 
+## Links
+
+- GitHub: https://github.com/BasleT/mdforge
+
 ## Suggested Screenshots
 
 - `mdforge --help`
