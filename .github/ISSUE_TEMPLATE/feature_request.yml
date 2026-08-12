@@ -1,0 +1,36 @@
+name: Feature Request
+description: Suggest a focused improvement for mdforge.
+title: "Feature: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        mdforge v0.1.0 is intentionally a focused local-first CLI. Please keep suggestions concrete and avoid including private source material.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow or limitation should this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What would you like mdforge to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - CLI UX
+        - Template behavior
+        - Provider architecture
+        - Input/output handling
+        - Documentation
+        - Other
+    validations:
+      required: true

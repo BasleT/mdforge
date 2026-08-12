@@ -17,7 +17,9 @@ Initial public release.
 - Ollama provider boundary with local generation through `/api/generate`.
 - Lightweight Markdown cleanup that rejects empty responses and removes accidental outer Markdown fences.
 - Focused tests for CLI parsing, prompt composition, templates, input/output behavior, and Markdown cleanup.
-- GitHub Actions CI for formatting, clippy, and tests.
+- Executable smoke tests for help, template listing, and missing-file behavior.
+- GitHub Actions CI for formatting, clippy, tests, and package verification.
+- Contribution guide, security policy, issue templates, PR template, architecture notes, and release notes.
 
 ### Notes
 
