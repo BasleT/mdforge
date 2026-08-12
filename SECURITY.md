@@ -12,7 +12,7 @@ Security fixes are currently targeted at the latest released version.
 
 ## Reporting Issues
 
-Please report security issues privately through GitHub's private vulnerability reporting feature if it is enabled for the repository. If that is unavailable, open a minimal public issue that asks for a private contact path without including exploit details or sensitive data.
+Please report security issues through GitHub's private vulnerability reporting feature if it is enabled for the repository. If that is unavailable, open a minimal public issue that asks for a private contact path without including exploit details or sensitive data.
 
 ## Data Handling Notes
 

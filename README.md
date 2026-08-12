@@ -1,5 +1,8 @@
 # mdforge
 
+[![CI](https://github.com/BasleT/mdforge/actions/workflows/ci.yml/badge.svg)](https://github.com/BasleT/mdforge/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Local-first Markdown generation for developers using Rust and Ollama.
 
 mdforge is a focused CLI that transforms prompts and local text files into structured Markdown using a locally running Ollama model. It is designed for messy notes, logs, source files, configuration, JSON, and rough ideas that should become useful documentation without sending source material to a hosted LLM API.
@@ -40,7 +43,7 @@ Command:
 mdforge file examples/incident-notes.txt --template incident-report --strict
 ```
 
-Result:
+Example output:
 
 ```markdown
 # Incident Report
@@ -56,7 +59,7 @@ Server died at 3am. Database connection timeout occurred. The API was restarted.
 - Probably add better logging
 ```
 
-Exact output depends on the local model, but strict mode tells mdforge to avoid unsupported operational facts.
+Exact output depends on the local model. Strict mode tells mdforge to avoid unsupported operational facts, but generated Markdown should still be reviewed when accuracy matters.
 
 ## Installation
 
@@ -77,6 +80,8 @@ The default development model is `qwen2.5-coder:14b`, but you can use another in
 Build mdforge:
 
 ```text
+git clone https://github.com/BasleT/mdforge.git
+cd mdforge
 cargo build --release
 ```
 
@@ -212,18 +217,14 @@ Future ideas, not current v0.1.0 capabilities:
 - Optional grounding verification
 - Directory processing
 
-## Repository Metadata
+## Repository
 
-Suggested GitHub description:
+GitHub: <https://github.com/BasleT/mdforge>
+
+Repository description:
 
 ```text
 Local-first Rust CLI for turning prompts and text files into structured Markdown with Ollama.
-```
-
-Suggested topics:
-
-```text
-rust, cli, markdown, ollama, local-ai, developer-tools, documentation, llm
 ```
 
 ## License
